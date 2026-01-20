@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
 function scrollToAppointment() {
     document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' });
 }
-function toggleButton(){
-    document.getElementById('appointment').reset();
-    document.getElementById('display').innerHTML("Thank-you! Form cleared");
-}
+document.getElementById('clearBtn').addEventListener('click', function (e) {
+    e.preventDefault();  // stop form from submitting
+
+    document.getElementById('appointmentForm').reset();
+
+    document.getElementById('responseMsg').textContent = "Form cleared!";
+});
