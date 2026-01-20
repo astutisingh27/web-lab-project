@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagar Hospital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>Sagar Hospital</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#appointment">Appointment</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Your Health, Our Priority</h1>
+    <p>Book appointments with trusted doctors</p>
+    <button class="btn" onclick="scrollToAppointment()">Book Appointment</button>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+        <div class="card">Emergency Care</div>
+        <div class="card">Cardiology</div>
+        <div class="card">Orthopedics</div>
+        <div class="card">Diagnostics</div>
+    </div>
+</section>
+
+<section id="doctors">
+    <h2>Our Doctors</h2>
+    <div class="doctor-grid">
+        <div class="doctor-card">
+            <h3>Dr. Anil Verma</h3>
+            <p>Cardiologist</p>
+        </div>
+        <div class="doctor-card">
+            <h3>Dr. Pooja Singh</h3>
+            <p>Orthopedic Surgeon</p>
+        </div>
+        <div class="doctor-card">
+            <h3>Dr. Neha Kapoor</h3>
+            <p>General Physician</p>
+        </div>
+    </div>
+</section>
+
+<section id="appointment">
+    <h2>Book Appointment</h2>
+    <form id="appointmentForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+
+        <select id="department" required>
+            <option value="">Select Department</option>
+            <option>Cardiology</option>
+            <option>Orthopedics</option>
+            <option>General Medicine</option>
+        </select>
+
+        <input type="date" id="date" required>
+        <textarea id="message" placeholder="Your Message"></textarea>
+
+        <button class="btn" type="submit">Submit</button>
+        <button class="clear" onclick="toggleButton()">Clear Form</button>
+        <p id="display"></p>
+    </form>
+
+    <p id="responseMsg"></p>
+</section>
+
+<footer>
+    © 2025 Sagar Hospital
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
